@@ -1,0 +1,100 @@
+.interface {
+    width: 450px;
+    height: 450px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin-bottom: 10px;
+}
+
+.cell {
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+.cell:nth-child(1) {
+    border-top: none;
+    border-left: none
+}
+.cell:nth-child(2) {
+    border-top: none;
+}
+.cell:nth-child(3) {
+    border-top: none;
+    border-right: none;
+}
+.cell:nth-child(4) {
+    border-left: none;
+}
+.cell:nth-child(6) {
+    border-right: none;
+}
+.cell:nth-child(7) {
+    border-bottom: none;
+    border-left: none;
+}
+.cell:nth-child(8) {
+    border-bottom: none;
+}
+.cell:nth-child(9) {
+    border-bottom: none;
+    border-right: none;
+}
+
+._5cc51f {
+    background-color: #5cc51f !important;
+}
+
+._d3332a {
+    background-color: #d3332a !important;
+}
+
+button {
+    font-size: 50px;
+}
+
+button:active {
+    background-color: rgba(200, 200, 200, 0.6);
+}
+
+button.cell {
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 100px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .interface {
+        width: 320px;
+        height: 320px;
+    }
+
+    button.button {
+        font-size: 20px;
+    }
+
+    button.cell {
+        font-size: 50px;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .interface {
+        width: 300px;
+        height: 300px;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button.button {
+        font-size: 20px;
+    }
+
+    button.cell {
+        font-size: 40px;
+    }
+}
