@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import Interface from "./Interface";
 import './App.css';
-import { _0x1602b4, _0x231437, _0x41c30c } from './utils/functions';
+import { _0x5c04db, _0x1a1a34, _0x1e1775 } from './utils/functions';
 
 const sleep = (t) => new Promise((resolve) => setTimeout(() => resolve(true), t));
 // const randomPlayer = () => Math.random() > 0.5 ? "X" : "O";
@@ -46,7 +46,7 @@ export default function App() {
     const MovementIA = () => {
         const _cells = JSON.parse(JSON.stringify(cells));
         const _config = JSON.parse(JSON.stringify(config));
-        const [__arr, __config] = _0x1602b4(_cells, _config, difficulty);
+        const [__arr, __config] = _0x5c04db(_cells, _config, difficulty);
         setCells(__arr);
         setConfig(__config);
         setRoundIA(false);
@@ -61,12 +61,12 @@ export default function App() {
 
     useEffect(() => {
         if (cells.find((e) => e !== "")) {
-            _0x231437(cells, atualPlayer).then((win) => {
+            _0x1a1a34(cells, atualPlayer).then((win) => {
                 if (win) {
                     contrastCellsAsWin(win);
                     sleep(100)
                         .then(() => { alert(`Vitória do jogador: ${atualPlayer}`); resetConfigs() })
-                } else if (_0x41c30c(cells)) {
+                } else if (_0x1e1775(cells)) {
                     contrastCellsAsTie();
                     sleep(100)
                         .then(() => { alert("Empate!!!"); resetConfigs() })
